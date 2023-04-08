@@ -6,7 +6,7 @@
 /*   By: obouhrir <obouhrir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/06 15:02:38 by obouhrir          #+#    #+#             */
-/*   Updated: 2023/04/08 05:20:27 by obouhrir         ###   ########.fr       */
+/*   Updated: 2023/04/08 05:34:43 by obouhrir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ void	sort_three(t_stack *s)
 				ra(s);
 		}
 	}
-	else if (s->stack_a[2] > s->stack_a[1])
+	if (s->stack_a[s->top_a] > s->stack_a[s->top_a - 1])
 		sa(s);
 }
 

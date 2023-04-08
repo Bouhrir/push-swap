@@ -6,7 +6,7 @@
 /*   By: obouhrir <obouhrir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/01 17:56:23 by obouhrir          #+#    #+#             */
-/*   Updated: 2023/04/08 05:18:44 by obouhrir         ###   ########.fr       */
+/*   Updated: 2023/04/08 21:17:01 by obouhrir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,8 +45,12 @@ int	main(int ac, char **av)
 	push_to_stack_a(a.i, &s, a.arg);
 	duplicated(s.stack_a, size);
 	if (sorted(&s, size))
+	{
 		return (0);
+	}
 	a.arr = numbers_rank(&s, size);
 	index_stack(&a, &s, size);
 	push__swap(size, &s);
+	free_stack(&s);
+	free_arg(a.arg, size);
 }

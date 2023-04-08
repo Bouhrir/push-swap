@@ -6,7 +6,7 @@
 /*   By: obouhrir <obouhrir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/06 23:27:26 by obouhrir          #+#    #+#             */
-/*   Updated: 2023/04/07 01:20:45 by obouhrir         ###   ########.fr       */
+/*   Updated: 2023/04/08 17:37:51 by obouhrir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,7 +74,7 @@ char	*ft_strdup(const char *s1)
 }
 
 /*--------ft_strjoin----------------*/
-char	*ft_strjoin(char const	*s1, char const	*s2)
+char	*ft_strjoin(char	*s1, char	*s2)
 {
 	char	*p;
 	int		i;
@@ -98,5 +98,6 @@ char	*ft_strjoin(char const	*s1, char const	*s2)
 		p[x++] = s2[j++];
 	}
 	p[x] = '\0';
+	free(s1);
 	return (p);
 }
